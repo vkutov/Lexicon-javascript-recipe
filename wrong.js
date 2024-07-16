@@ -34,3 +34,18 @@ ingredients.innerHTML = "<li>15st digestivetex</li><li>Lite smör</li>";
 // 10. The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
 const socker = document.querySelectorAll(".ingredients-list-paste li")[2];
 socker.innerText = "3tsk vaniljsocke";
+
+// 11 There is also a missing ingredient in the list of ingredients to the paste. Look and see what it is and add that one the the end of the list.
+let philadelphia = document.createElement("li");
+philadelphia.textContent = "400g naturell philadelphiaost";
+document.querySelector(".ingredients-list-paste").appendChild(philadelphia);
+
+//12. The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. Remove that styling.
+let shadow = document.querySelector(".instructions").classList;
+shadow.remove("shadow");
+
+// 13 Two list elements of the list of instructions are incorrect. Find them and change them to the correct ones.
+let newInstructions = document.querySelectorAll(".instructions-list li");
+newInstructions[1].textContent =
+  "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+newInstructions[2].textContent = "Ställ in i frysen över natten.";
